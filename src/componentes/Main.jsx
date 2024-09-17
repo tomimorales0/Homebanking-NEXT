@@ -91,7 +91,7 @@ export default function Main() {
         </div>
       </div>
 
-      <div className="bg-white rounded-sm shadow-md p-4 dark:text-white dark:bg-gray-800 text-gray-800 text-wrap">
+      <div className="bg-white rounded-sm shadow-md p-4 text-black bg-gray-800 text-gray-800 text-wrap">
         <h2 className="text-2xl font-semibold text-center">Nosotros</h2>
         <p className="mt-20 text-lg">
           Horizon Bank fue fundado en 1973, en Michigan City, Indiana, Estados

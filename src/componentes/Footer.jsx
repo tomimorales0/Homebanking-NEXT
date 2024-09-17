@@ -1,61 +1,42 @@
 import { Link } from "react-router-dom";
+import React from 'react';
 
-export default function Footer() {
+function Footer() {
   return (
-    <footer>
-      <div className="links-legales">
-        <Link
-          target="_blank"
-          to="politica_de_privacidad.html"
-          className="text-black dark:text-white"
-        >
-          Politica de privacidad
-        </Link>
-        <Link
-          target="_blank"
-          to="terminos&condiciones.html"
-          className="text-black dark:text-white"
-        >
-          Terminos y condiciones
-        </Link>
-      </div>
-
-      <div className="footer-content">
-        <ul className="redes">
-          <li>
-            <Link
-              to="#"
-              className="fc"
-            >
-              <i className="fa-brands fa-facebook"></i>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="#"
-              className="ig"
-            >
-              <i className="fa-brands fa-instagram"></i>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="#"
-              className="x"
-            >
-              <i className="fa-brands fa-x-twitter"></i>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="#"
-              className="whats"
-            >
-              <i className="fa-brands fa-whatsapp"></i>
-            </Link>
-          </li>
-        </ul>
+    <footer className="flex-none bg-gray-900 p-4">
+      <div className="container mx-auto text-white text-center">
+        <p className="text-sm">
+          © {new Date().getFullYear()} Horizon. Todos los derechos reservados.
+        </p>
+        <div className="mt-2 flex justify-center gap-4">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
+            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.004a10 10 0 1 0 0 20.002 10 10 0 0 0 0-20.002zM13.368 12.04v6.002h-2.148v-6.002h-1.646v-2.097h1.646v-1.47c0-2.032 1.057-3.366 2.68-3.366.817 0 1.704.056 2.084.083v2.322h-1.199c-1.179 0-1.482.568-1.482 1.44v1.835h2.457l-.323 2.097h-2.134z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
+            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 0h-8c-4.4 0-8 3.6-8 8v8c0 4.4 3.6 8 8 8h8c4.4 0 8-3.6 8-8v-8c0-4.4-3.6-8-8-8zm4 16c0 .6-.4 1-1 1h-2v-4h2c.6 0 1 .4 1 1v2zm-4-6h-4v4h4v-4zm0-2v-1h1v1h-1zm4 8h-1v-2h1v2zm0-7h-1v1h1v-1z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
+            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4.636a8.668 8.668 0 0 1-2.434.665 4.265 4.265 0 0 0 1.867-2.362 8.548 8.548 0 0 1-2.72 1.036 4.26 4.26 0 0 0-7.386 3.879c0 .334.037.66.108.975a12.118 12.118 0 0 1-8.774-4.442c-.375.637-.592 1.374-.592 2.164 0 1.494.761 2.812 1.91 3.586a4.296 4.296 0 0 1-1.936-.534v.055c0 2.087 1.484 3.822 3.457 4.212a4.281 4.281 0 0 1-1.933.074c.547 1.707 2.13 2.946 3.99 2.98a8.55 8.55 0 0 1-5.313 1.832c-.347 0-.686-.016-1.023-.059a12.096 12.096 0 0 0 6.56 1.922c7.87 0 12.206-6.508 12.206-12.188 0-.186-.005-.371-.014-.555A8.688 8.688 0 0 0 22 6.335a8.496 8.496 0 0 1-2.031.556 4.257 4.257 0 0 0 1.86-2.353z"/>
+            </svg>
+          </a>
+          <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
+            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.32 4.68c-3.56-3.56-9.4-3.56-12.96 0-3.56 3.56-3.56 9.4 0 12.96 2.48 2.48 5.55 3.79 8.73 3.79 1.3 0 2.58-.32 3.73-.91l4.04 1.15-1.19-4.08c.72-1.16 1.14-2.47 1.14-3.78 0-3.2-1.31-6.36-3.68-8.83zm-2.77 7.95l-.07.07c-.29.29-.62.52-.99.72-.07.04-.16.08-.24.13-.55.27-1.18.42-1.83.42-.43 0-.85-.07-1.25-.21-.41-.14-.81-.35-1.19-.64-.25-.21-.49-.46-.69-.73-.28-.38-.47-.81-.57-1.27-.06-.23-.11-.46-.13-.7-.03-.31-.02-.62.06-.93.03-.1.09-.19.14-.28.09-.15.24-.25.4-.32.04-.02.09-.02.13-.04.32-.08.63.06.87.24.23.18.48.36.74.51.2.13.41.21.62.35.2.14.39.29.59.46.26.22.54.43.81.65.2.15.41.27.63.39.31.17.62.37.91.58.09.06.18.13.27.2.28.19.61.26.93.16.32-.1.57-.32.71-.63.13-.28.13-.61.02-.88-.01-.01-.01-.02-.02-.03-.09-.22-.23-.43-.41-.62-.2-.22-.43-.43-.68-.62-.34-.27-.7-.54-1.06-.79-.21-.14-.43-.27-.66-.39-.23-.12-.48-.23-.72-.34-.29-.09-.58-.2-.85-.33-.07-.02-.15-.03-.22-.05-.5-.15-.98-.38-1.42-.65-.18-.1-.36-.23-.51-.38-.25-.28-.42-.62-.53-.97-.05-.18-.07-.37-.07-.56 0-.2.04-.41.12-.6.04-.11.1-.21.18-.3.09-.11.21-.2.33-.29.24-.12.5-.17.76-.22.24-.03.48-.06.72-.06.18 0 .37.02.56.07.2.04.39.12.57.24.1.07.2.15.28.24.04.06.07.13.1.2.09.23.18.45.27.68.05.15.1.31.14.46.02.09.04.19.04.29 0 .14-.02.27-.05.4-.05.16-.1.32-.16.48-.06.13-.14.27-.23.38-.12.14-.25.28-.38.41-.22.2-.46.38-.72.56-.11.09-.24.17-.37.26-.26.21-.53.39-.81.56-.21.14-.44.26-.67.38-.34.17-.69.31-1.05.44-.12.03-.23.08-.34.1-.2.06-.4.07-.61.03z"/>
+            </svg>
+          </a>
+        </div>
+        <div className="mt-4">
+          <Link href="/pages/terminoscondiciones" className="text-white hover:text-gray-400 text-sm">
+            Términos y Condiciones
+          </Link>
+        </div>
       </div>
     </footer>
   );
 }
+export default Footer;
