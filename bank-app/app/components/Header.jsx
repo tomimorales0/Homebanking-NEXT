@@ -9,7 +9,7 @@ export default function Header() {
           <span className="text-xl font-bold">MyBank</span>
         </div>
         <div className="flex items-center">
-          <span className="mr-4">Welcome, John Doe</span>
+          <span className="mr-4">Welcome,</span>
           <div className="h-8 w-8 rounded-full bg-gray-300 flex items-center justify-center">
             <span className="text-sm font-medium">JD</span>
           </div>
