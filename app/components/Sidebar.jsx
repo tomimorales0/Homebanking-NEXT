@@ -9,7 +9,7 @@ const navItems = [
   { icon: HomeIcon, label: 'Inicio', href: '/' },
   { icon: CreditCardIcon, label: 'Cuenta', href: '/cuenta' },
   { icon: BanknotesIcon, label: 'Facturacion', href: '/facturas' },
-  { icon: ArrowsRightLeftIcon, label: 'Transferencias', href: '/transferencias' },
+  { icon: ArrowsRightLeftIcon, label: 'Transferencias', href: '/transferencias/cuentas' },
 ]
 
 export default function Sidebar() {
@@ -34,7 +34,7 @@ export default function Sidebar() {
       </button>
 
       <nav className={`
-        bg-white w-64 p-6 space-y-4 fixed top-10 left-0 h-min-full z-10 transition-transform duration-300 ease-in-out
+        bg-gray-600 w-64 p-6 space-y-4 fixed top-10 left-0 h-min-full z-10 transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:static
       `}>
@@ -42,12 +42,11 @@ export default function Sidebar() {
           const Icon = item.icon
           return (
             <Link
-              key={item.href}
               href={item.href}
               className={`flex items-center px-4 py-2 rounded-md ${
                 pathname === item.href
-                  ? 'bg-blue-100 text-blue-600'
-                  : 'text-gray-700 hover:bg-gray-100'
+                  ? 'bg-emerald-200-100 text-emerald-600'
+                  : 'text-gray-100 hover:bg-gray-500'
               }`}
             >
               <Icon className="mr-2 h-5 w-5" />

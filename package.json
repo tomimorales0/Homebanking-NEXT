@@ -10,9 +10,15 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
+<<<<<<< HEAD
+    "next": "14.2.12",
+    "react": "^18.3.1",
+    "react-dom": "^18"
+=======
     "next": "^14.2.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+>>>>>>> 396bc438c845ea5e7806354554f24feb2174b274
   },
   "devDependencies": {
     "eslint": "^8",
