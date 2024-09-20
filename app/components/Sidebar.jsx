@@ -23,7 +23,7 @@ export default function Sidebar() {
   return (
     <>
       <button
-        className="lg:hidden fixed top-4 left-4 z-20 p-2 rounded-md bg-white shadow-md"
+        className="lg:hidden fixed top-4 left-4 z-20 p-2 rounded-md bg-black shadow-md"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
@@ -34,7 +34,8 @@ export default function Sidebar() {
       </button>
 
       <nav className={`
-        bg-gray-600 w-64 p-6 space-y-4 fixed top-10 left-0 h-min-full z-10 transition-transform duration-300 ease-in-out
+       bg-gradient-to-b from-gray-400 via-gray-300 to-gray-200 w-64 p-6 space-y-4 fixed 
+       top-10 left-0 h-min-full z-10 transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:static
       `}>
@@ -46,7 +47,7 @@ export default function Sidebar() {
               className={`flex items-center px-4 py-2 rounded-md ${
                 pathname === item.href
                   ? 'bg-emerald-200-100 text-emerald-600'
-                  : 'text-gray-100 hover:bg-gray-500'
+                  : 'text-black hover:bg-gray-400'
               }`}
             >
               <Icon className="mr-2 h-5 w-5" />
@@ -56,7 +57,7 @@ export default function Sidebar() {
         })}
         <Link
           href="/logout"
-          className="flex items-center text-red-500 hover:bg-red-100 px-4 py-2 rounded-md"
+          className="flex items-center text-red-600 hover:bg-red-100 px-4 py-2 rounded-md"
         >
           <div className="mr-2 h-5 w-5" />
           <span>Cerrar sesión</span>

@@ -1,8 +1,9 @@
 import { BanknotesIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="bg-gray-800 shadow-sm">
+    <header className="bg-gray-400 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <BanknotesIcon className="h-8 w-8 text-green-600 mr-2" />

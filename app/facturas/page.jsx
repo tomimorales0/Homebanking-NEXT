@@ -1,13 +1,13 @@
 export default function Facturas() {
     return (
       <div>
-      <h1 className="text-2xl text-white font-bold">Facturas</h1>
+      <h1 className="text-4xl font-bold">Facturas</h1>
         <div className="w-full flex justify-around my-12 flex-wrap md:flex-nowrap gap-5">
-          <section className="bg-gray-900 w-full sm:min-w-[300px]">
-            <div className="flex flex-col bg-gray-800 px-12">
-              <div className="w-full rounded-sm shadow border md:mt-0 xl:p-0 bg-gray-800 border-gray-700 max-w-[800px]">
+          <section className="bg-gray-400 w-full sm:min-w-[300px]">
+            <div className="flex flex-col bg-gray-400 px-12">
+              <div className="w-full rounded-sm shadow border md:mt-0 xl:p-0 bg-gray-400 border-gray- max-w-[800px]">
                 <div className="p-6 space-y-4 md:space-y-6 sm:p-8 justify-center">
-                  <h2 className="text-lg text-white font-bold leading-tight tracking-tight text-white md:text-xl text-white text-center">
+                  <h2 className="text-lg font-bold leading-tight tracking-tight text-white md:text-xl text-center">
                     Pagar
                   </h2>
                   <form
@@ -26,7 +26,7 @@ export default function Facturas() {
                         name="codigo-pago"
                         required={true}
                         id="codigo-pago"
-                        className="bg-gray-50 border border-gray-300 text-white sm:text-sm rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                        className="bg-gray-50 border border-gray-300 text-white sm:text-sm rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-green-500 focus:border-green-500"
                         placeholder="01700998974894189486454648489189189984497370"
                         autoComplete="off"
                         minLength="6"
@@ -53,7 +53,7 @@ export default function Facturas() {
                           className="block w-full rounded-md border-0 py-1.5 pl-7
                             pr-20 text-gray-900 text-white bg-gray-700
                             ring-gray-300 placeholder:text-gray-400 focus:ring-2
-                            focus:ring-inset focus:ring-indigo-600 sm:text-sm
+                            focus:ring-inset focus:ring-green-600 sm:text-sm
                             sm:leading-6"
                           placeholder="0.00"
                         />
@@ -67,7 +67,7 @@ export default function Facturas() {
                           <select
                             id="moneda-pago"
                             name="moneda-pago"
-                            className="h-full rounded-md border-0 bg-transparent py-0 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm text-white bg-gray-700"
+                            className="h-full rounded-md border-0 bg-transparent py-0 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm text-white bg-gray-700"
                           >
                             <option>ARS</option>
                             <option>USD</option>
@@ -88,7 +88,7 @@ export default function Facturas() {
                           name="emisor-transferencia"
                           autoComplete="emisor-cuenta"
                           required
-                          className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
+                          className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
                         >
                           <option
                             selected
@@ -99,7 +99,7 @@ export default function Facturas() {
                         </select>
                       </div>
                     </div>
-                    <button className="w-full text-white bg-primary-600 hover:bg-primary-700 hover:ring-4 hover:ring-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800">
+                    <button className="w-full text-white bg-primary-600 hover:bg-primary-700 hover:ring-4 hover:ring-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center bg-primary-600 hover:bg-primary-700 focus:ring-green-800">
                       Realizar Pago
                     </button>
                   </form>
@@ -131,7 +131,7 @@ export default function Facturas() {
                           name="cuenta-destino"
                           autoComplete="cuenta-destino"
                           required
-                          className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
+                          className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
                         >
                           <option
                             selected
@@ -155,7 +155,7 @@ export default function Facturas() {
                           name="cantidad-cuotas"
                           autoComplete="cantidad-cuotas"
                           required
-                          className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
+                          className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
                         >
                           <option
                             selected
@@ -191,7 +191,7 @@ export default function Facturas() {
                           className="block w-full rounded-md border-0 py-1.5 pl-7
                             pr-20 text-gray-900 text-white bg-gray-700
                             ring-gray-300 placeholder:text-gray-400 focus:ring-2
-                            focus:ring-inset focus:ring-indigo-600 sm:text-sm
+                            focus:ring-inset focus:ring-green-600 sm:text-sm
                             sm:leading-6"
                           placeholder="0.00"
                         />
@@ -205,7 +205,7 @@ export default function Facturas() {
                           <select
                             id="moneda-prestamo"
                             name="currency"
-                            className="h-full rounded-md border-0 bg-transparent py-0 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm text-white bg-gray-700"
+                            className="h-full rounded-md border-0 bg-transparent py-0 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm text-white bg-gray-700"
                           >
                             <option>ARS</option>
                             <option>USD</option>
