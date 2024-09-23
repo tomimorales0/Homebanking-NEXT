@@ -19,11 +19,12 @@ export default function Sidebar() {
   useEffect(() => {
     setIsOpen(false)
   }, [pathname])
+  
 
   return (
     <>
       <button
-        className="lg:hidden fixed top-4 left-4 z-20 p-2 rounded-md bg-black shadow-md"
+        className="lg:hidden fixed top-4 left-4 z-20 p-2 rounded-md bg-gray-300 shadow-md"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
