@@ -21,7 +21,7 @@ const FormClient = () => {
     <div>
       <button
         onClick={toggleForm}
-        className="bg-green-500 text-white px-4 py-2 rounded hover:bg-emerald-00 transition"
+        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition"
       >Transferir
       </button>
 
@@ -50,9 +50,9 @@ const FormClient = () => {
                           <span className="text-gray-500 sm:text-sm">$</span>
                         </div>
                         <input className="block w-full rounded-md border-0 py-1.5 pl-7
-                            pr-20 text-gray-900 text-white bg-gray-700
+                            pr-20 bg-white
                             ring-gray-300 placeholder:text-gray-400 focus:ring-2
-                            focus:ring-inset focus:ring-indigo-600 sm:text-sm
+                            focus:ring-inset focus:ring-green-600 sm:text-sm
                             sm:leading-6"
                           type="number"
                           name="amount"
@@ -72,7 +72,7 @@ const FormClient = () => {
                           <select
                             id="currency"
                             name="currency"
-                            className="h-full rounded-md border-0 bg-transparent py-0 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm text-white bg-gray-700"
+                            className="h-full rounded-md border-0 bg-transparent py-0 pr-7 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm bg-white"
                           >
                             <option defaultValue value="ARS">ARS</option>
                             <option value="USD">USD</option>
@@ -80,9 +80,15 @@ const FormClient = () => {
                         </div>
                       </div>
                     </div>
-                    
-                      
-                    <button className="w-full text-white bg-primary-600 hover:bg-primary-700 hover:ring-4 hover:ring-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800">
+                    <div>
+                      <p className='block mb-2 text-sm font-medium text-white'>Mensaje</p>
+                    <textarea
+                      placeholder="Descripción"
+                      rows="1"
+                      className="w-full p-3 text-lg border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600 mb-4"
+                    />
+                    </div>
+                    <button className="w-full text-white bg-primary-600 hover:bg-primary-700 hover:ring-4 hover:ring-green-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center">
                       Realizar Transferencia
                     </button>
                   </form>

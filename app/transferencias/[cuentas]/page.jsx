@@ -12,7 +12,7 @@ export default function Transferencias() {
   const usuarios = await dataUser({})
   
   return (
-    <div className="bg-gray-400"><ul className=""> {usuarios.map((user) => ( <li key={user.id} className="flex my-5 p-2 justify-between rounded-lg hover:border-2 border-gray-500"> <div><h2 className="text-gray-600 bg-white  p-5 rounded-full">{getInitials(user.name)}</h2></div> <h2 className="text-white">{user.name}<br/>{user.company}</h2> <FormClient/> </li> ))} </ul></div>
+    <div className="bg-gray-400"><ul className=""> {usuarios.map((user) => ( <li key={user.id} className="flex my-5 p-2 justify-between rounded-lg sm:border-white  hover:border-2 border-white"> <div><h2 className="text-gray-600 bg-white p-2 rounded-full sm:p-5">{getInitials(user.name)}</h2></div> <h2 className="text-white text-sm sm:text-lg">{user.name}<br/>{user.company}</h2> <FormClient/> </li> ))} </ul></div>
   );
 }
 
