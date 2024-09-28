@@ -1,12 +1,14 @@
-import Head from 'next/head';
+export async function generateMetadata() {
+  return {
+    title: 'Terminos y condiciones',
+    description: 'Consulta los terminos y condiciones del sitio',
+    keywords: ['terminos', 'condiciones', 'servicios'],
+  };
+}
 
 export default function Terms() {
     return (
     <>
-        <Head>
-            <title>Términos y Condiciones - Horizon Bank</title>
-            <meta name="description" content="Consulta los términos y condiciones del sitio web de Horizon Bank. Conoce los derechos y responsabilidades al utilizar nuestros servicios en línea." />
-      </Head>
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-bold text-gray-900">Términos y Condiciones del Sitio</h1>
         <p className="mt-4 text-gray-600">

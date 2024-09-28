@@ -1,3 +1,11 @@
+export async function generateMetadata() {
+  return {
+    title: 'Cuentas',
+    description: 'Consulta tu saldo',
+    keywords: ['saldo', 'transacciones recientes', 'dinero'],
+  };
+}
+
 export default function Cuenta() {
     return (
       <>

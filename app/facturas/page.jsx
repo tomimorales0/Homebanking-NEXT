@@ -1,3 +1,11 @@
+export async function generateMetadata() {
+  return {
+    title: 'Facturación',
+    description: 'Consulta tus facturas y paga tus servicios',
+    keywords: ['facturas', 'pagos', 'prestamos'],
+  };
+}
+
 export default function Facturas() {
     return (
       <div>

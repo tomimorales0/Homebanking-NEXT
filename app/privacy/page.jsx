@@ -1,3 +1,11 @@
+export async function generateMetadata() {
+  return {
+    title: 'Privacidad',
+    description: 'Consulta las politicas de privacidad del sitio',
+    keywords: ['politicas', 'privacidad', 'cookies'],
+  };
+}
+
 export default function PrivacyPolicy() {
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">

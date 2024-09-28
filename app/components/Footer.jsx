@@ -9,9 +9,6 @@ export default function Footer() {
             <p className="text-gray-600">&copy; 2024 Horizon Bank. Todos los derechos reservados.</p>
           </div>
           <nav className="flex space-x-8">
-            <Link href="/about" className="text-gray-600 hover:text-green-600">
-              Info
-            </Link>
             <Link href="/contact" className="text-gray-600 hover:text-green-600">
               Contacto
             </Link>

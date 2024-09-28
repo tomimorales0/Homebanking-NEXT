@@ -1,4 +1,12 @@
 'use client';
+export async function generateMetadata() {
+  return {
+    title: 'Contactos',
+    description: 'Consulta tus contactos',
+    keywords: ['contactos', 'amigos', 'contacts'],
+  };
+}
+
 import { useState } from 'react';
 
 export default function Contact() {

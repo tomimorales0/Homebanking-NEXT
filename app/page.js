@@ -1,4 +1,11 @@
 "use server";
+export async function generateMetadata() {
+  return {
+    title: 'Lading page',
+    description: 'Ve todas las opciones que ofrece nuestro sitio',
+    keywords: ['horizon', 'homebanking', 'banco'],
+  };
+}
 
 export default async function Inicio() {
   return (
