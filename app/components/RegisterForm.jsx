@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from 'react';
+import { useState } from "react";
+import { useRouter } from "next/navigation"; // Importar useRouter
 
 const RegisterForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const router = useRouter(); // Inicializar useRouter
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,8 +15,12 @@ const RegisterForm = () => {
       alert("Las contraseñas no coinciden");
       return;
     }
-    // Lógica para manejar el registro
-    console.log('Registrarse con:', { email, password });
+
+    // Lógica para manejar el registro (aquí solo hay un console.log)
+    console.log("Registrarse con:", { email, password });
+
+    // Redirigir a /login después de completar el formulario
+    router.push("/login");
   };
 
   return (
