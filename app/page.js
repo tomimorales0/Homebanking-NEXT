@@ -1,19 +1,25 @@
-"use server";
-export async function generateMetadata() {
-  return {
-    title: 'Lading page',
-    description: 'Ve todas las opciones que ofrece nuestro sitio',
-    keywords: ['horizon', 'homebanking', 'banco'],
-  };
-}
+"use client"; 
+
+import { useRouter } from 'next/navigation'; 
+import Head from 'next/head';
+
+<Head>
+<title>Home</title>
+<meta name="description" content="Bienvenido al banco mas rapido de latinoamerica!" />
+</Head>
 
 export default async function Inicio() {
+  const router = useRouter(); // Obtiene el enrutador
+
+  // Maneja el clic del botón
+  const handleButtonClick = () => {
+    router.push('/register'); // Redirige a la página de registro
+  };
+
   return (
     <>
-
       {/* Sección de la tarjeta */}
       <div className="relative isolate overflow-hidden bg-gray-600 py-24 sm:py-32 rounded mx-auto w-full">
-
         <img
           src="/images/slider2.jpg"
           alt="imagen-persona-feliz"
@@ -34,7 +40,6 @@ export default async function Inicio() {
 
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Pide tu tarjeta
             </h2>
@@ -53,18 +58,18 @@ export default async function Inicio() {
 
           {/* Botón de acción */}
           <div className="mt-12">
-            <a
-              href="#"
+            <button
+              onClick={handleButtonClick} // Maneja el clic
               className="flex w-36 justify-center rounded-2xl bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-center"
             >
               Solicita tu tarjeta
-            </a>
+            </button>
           </div>
         </div>
       </div>
 
       {/* Sección "Nosotros" */}
-      <div className="mt-12 rounded-lg  p-8 ">
+      <div className="mt-12 rounded-lg p-8 ">
         <h2 className="text-3xl font-semibold text-center">Nosotros</h2>
         <p className="mt-6 text-lg leading-8">
           Horizon Bank fue fundado en 1973, en Michigan City, Indiana, Estados Unidos.

@@ -1,15 +1,13 @@
-'use client';
-export async function generateMetadata() {
-  return {
-    title: 'Contactos',
-    description: 'Consulta tus contactos',
-    keywords: ['contactos', 'amigos', 'contacts'],
-  };
-}
+'use client'
+import Head from 'next/head';
 
 import { useState } from 'react';
 
 export default function Contact() {
+  <Head>
+                <title>Contactos</title>
+                <meta name="description" content="Consulta tus contactos" />
+  </Head>
   const [formData, setFormData] = useState({
     name: '',
     email: '',

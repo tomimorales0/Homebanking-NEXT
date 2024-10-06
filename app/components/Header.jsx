@@ -15,8 +15,8 @@ export default function Header() {
             <span className="text-sm font-medium"></span>
           </div>
           <Link href="/login">
-          <button className="p-6 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded">
-            Login
+          <button className="p-6 bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded">
+            Iniciar sesión
           </button>
         </Link>
         </div>

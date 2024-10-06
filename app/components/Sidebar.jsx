@@ -1,25 +1,32 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { HomeIcon, CreditCardIcon, BanknotesIcon, ArrowsRightLeftIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { HomeIcon, CreditCardIcon, BanknotesIcon, ArrowsRightLeftIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navItems = [
   { icon: HomeIcon, label: 'Inicio', href: '/' },
   { icon: CreditCardIcon, label: 'Cuenta', href: '/cuenta' },
-  { icon: BanknotesIcon, label: 'Facturacion', href: '/facturas' },
+  { icon: BanknotesIcon, label: 'Facturación', href: '/facturas' },
   { icon: ArrowsRightLeftIcon, label: 'Transferencias', href: '/transferencias/cuentas' },
-]
+];
 
 export default function Sidebar() {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    setIsOpen(false)
-  }, [pathname])
-  
+    setIsOpen(false);
+  }, [pathname]);
+
+  // Cierre de sesión
+  const handleLogout = () => {
+    // Elimina la cookie o token de autenticación
+    document.cookie = 'auth-token=; Max-Age=0; path=/'; 
+    router.push('/'); // Redirige a la ruta '/'
+  }
 
   return (
     <>
@@ -35,13 +42,13 @@ export default function Sidebar() {
       </button>
 
       <nav className={`
-       bg-gradient-to-b from-gray-400 via-gray-300 to-gray-200 w-64 p-6 space-y-4 fixed 
-       top-10 left-0 h-min-full z-10 transition-transform duration-300 ease-in-out
+        bg-gradient-to-b from-gray-400 via-gray-300 to-gray-200 w-64 p-6 space-y-4 fixed 
+        top-10 left-0 h-min-full z-10 transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:static
       `}>
         {navItems.map((item) => {
-          const Icon = item.icon
+          const Icon = item.icon;
           return (
             <Link
               href={item.href}
@@ -50,19 +57,22 @@ export default function Sidebar() {
                   ? 'bg-emerald-200-100 text-emerald-600'
                   : 'text-black hover:bg-gray-400'
               }`}
+              key={item.label}
             >
               <Icon className="mr-2 h-5 w-5" />
               <span>{item.label}</span>
             </Link>
-          )
+          );
         })}
-        <Link
-          href="/logout"
+
+        {/* Botón de cerrar sesión */}
+        <button
+          onClick={handleLogout}
           className="flex items-center text-red-600 hover:bg-red-100 px-4 py-2 rounded-md"
         >
           <div className="mr-2 h-5 w-5" />
           <span>Cerrar sesión</span>
-        </Link>
+        </button>
       </nav>
 
       {isOpen && (
@@ -72,5 +82,5 @@ export default function Sidebar() {
         ></div>
       )}
     </>
-  )
+  );
 }
