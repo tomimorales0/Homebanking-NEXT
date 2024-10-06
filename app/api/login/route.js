@@ -3,7 +3,7 @@ export async function POST(req) {
   
     // Lista de usuarios y contraseñas válidos
     const validUsers = [
-      { email: 'usuario1@example.com', password: 'password123' },
+      { email: 'user1@example.com', password: 'password123' },
       { email: 'usuario2@example.com', password: 'mypassword' },
       { email: 'usuario3@example.com', password: 'secretpass' },
     ];

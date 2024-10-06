@@ -1,4 +1,4 @@
-/*import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export function middleware(req) {
   const token = req.cookies.get('auth-token'); // Suponiendo que almacenas el token de sesión en cookies
@@ -13,4 +13,3 @@ export function middleware(req) {
 
   return NextResponse.next();
 }
-*/

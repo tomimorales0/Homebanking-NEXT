@@ -11,14 +11,14 @@ const LoginForm = () => {
 
   // Definimos las credenciales válidas
   const validCredentials = [
-    { email: 'user1@example.com', password: 'password123' },
-    { email: 'user2@example.com', password: 'mypassword' },
-    { email: 'user3@example.com', password: 'secretpass' },
+    { email: '1@2', password: '12' },
+    { email: 'usuario2@example.com', password: 'mypassword' },
+    { email: 'usuario3@example.com', password: 'secretpass' },
   ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Verificamos si las credenciales son válidas
     const user = validCredentials.find(
       (cred) => cred.email === email && cred.password === password
@@ -27,7 +27,6 @@ const LoginForm = () => {
     if (user) {
       // Aquí puedes almacenar el token en las cookies (puedes usar cualquier token que desees)
       document.cookie = 'auth-token=valid_token; path=/'; 
-      // Redirigir al usuario a la página de inicio o donde sea necesario
       router.push('/'); // Redirige a la página de inicio
     } else {
       // Manejar el error si las credenciales son inválidas
