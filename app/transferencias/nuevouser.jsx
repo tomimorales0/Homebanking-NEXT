@@ -1,10 +1,8 @@
-'use client'
-import Link from 'next/link';
+'use client';
 
 import { useState } from 'react';
-import userFetch from './page'
 
-const FormClient = () => {
+const FormNewClient = () => {
   const [showForm, setShowForm] = useState(false);
 
   const toggleForm = () => {
@@ -17,14 +15,12 @@ const FormClient = () => {
     }
   };
 
-
   return (
     <div>
-      
       <button
         onClick={toggleForm}
-        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition"
-      >Transferir
+        className="bg-green-600 text-white font-bold px-4 py-1 rounded hover:bg-green-500 transition"
+      >Nuevo +
       </button>
 
       {showForm && (
@@ -33,13 +29,33 @@ const FormClient = () => {
           onClick={handleClickOutside}
         >
           
-          <div className="flex flex-col bg-gray-400 ring-2 ring-emerald-500 p-10 rounded-lg">
+          <div className="flex flex-col bg-gray-500 ring-2 ring-emerald-500 p-10 rounded-lg">
                   <h2 className="text-lg font-bold text-white md:text-xl text-center">
                     Transferir
                   </h2>
                   <form
                     className="space-y-4 md:space-y-6"
                   >
+                    <div>
+                      <label
+                        htmlFor="receptor"
+                        className="block mb-2 text-sm font-medium text-white"
+                      >
+                        CBU / Alias
+                      </label>
+                      <input
+                        type="text"
+                        name="receptor"
+                        required={true}
+                        id="receptor-tranferencia"
+                        className="border border-gray-300 sm:text-sm rounded-lg focus:ring-green-600 w-full p-2.5 bg-white text-white"
+                        placeholder="0170099220000067797370"
+                        autoComplete="off"
+                        maxLength="22"
+                        minLength="6"
+                        aria-errormessage="Error: CVU incorrecto"
+                      />
+                    </div>
                     <div>
                       <label
                         htmlFor="amount"
@@ -52,7 +68,7 @@ const FormClient = () => {
                           <span className="text-gray-500 sm:text-sm">$</span>
                         </div>
                         <input className="block w-full rounded-md border-0 py-1.5 pl-7
-                            pr-20 bg-white
+                            pr-20 text-white bg-white
                             ring-gray-300 placeholder:text-gray-400 focus:ring-2
                             focus:ring-inset focus:ring-green-600 sm:text-sm
                             sm:leading-6"
@@ -101,4 +117,4 @@ const FormClient = () => {
   );
 };
 
-export default FormClient;
+export default FormNewClient;

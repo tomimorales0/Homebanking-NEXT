@@ -1,3 +1,5 @@
+import obtenerDatosFormulario from "../transferencias/formtranferencia"
+
 export async function generateMetadata() {
   return {
     title: 'Cuentas',

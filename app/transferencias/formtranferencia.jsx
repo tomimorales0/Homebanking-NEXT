@@ -1,8 +1,7 @@
-'use client'
-import Link from 'next/link';
+'use client';
 
 import { useState } from 'react';
-import userFetch from './page'
+import userFetch from './[cuentas]/page'
 
 const FormClient = () => {
   const [showForm, setShowForm] = useState(false);
@@ -20,7 +19,6 @@ const FormClient = () => {
 
   return (
     <div>
-      
       <button
         onClick={toggleForm}
         className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition"

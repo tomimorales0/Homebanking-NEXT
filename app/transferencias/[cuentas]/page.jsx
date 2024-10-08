@@ -1,6 +1,6 @@
 import FormClient from "./formtranferencia";
 import FormNewClient from "./nuevouser";
-
+import Link from "next/link";
 export default function Transferencias() {
   
  async function UserFetch() {
@@ -12,7 +12,7 @@ export default function Transferencias() {
   const usuarios = await dataUser({})
   
   return (
-    <div className="bg-gray-400"><ul className=""> {usuarios.map((user) => ( <li key={user.id} className="flex my-5 p-2 justify-between rounded-lg sm:border-white  hover:border-2 border-white"> <div><h2 className="text-gray-600 bg-white p-2 rounded-full sm:p-5">{getInitials(user.name)}</h2></div> <h2 className="text-white text-sm sm:text-lg">{user.name}<br/>{user.company}</h2> <FormClient/> </li> ))} </ul></div>
+    <div className="bg-gray-400"><ul className=""> {usuarios.map((user) => ( <li key={user.id} className="flex my-5 p-2 justify-between rounded-lg sm:border-white  hover:border-2 border-white"> <div><h2 className="text-gray-600 bg-white p-2 rounded-full sm:p-5">{getInitials(user.name)}</h2></div> <h2 className="text-white text-sm sm:text-lg">{user.name}<br/>{user.company}</h2><Link href={`${user.id}`}><FormClient/></Link>  </li> ))} </ul></div>
   );
 }
 
